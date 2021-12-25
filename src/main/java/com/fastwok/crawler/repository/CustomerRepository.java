@@ -13,6 +13,6 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
     List<Customer> findByBirthdayStartsWith(String day);
 
-    @Query("select c.id,c.phone,c.code,r.coin,r.level from Cskh c INNER JOIN Revenues r ON c.code=r.code order by c.id")
+    @Query("select c.id,c.phone,c.code,r.coin,r.level from Cskh c INNER JOIN Revenue r ON c.code=r.code order by c.id")
     List<Cskh> findByKey(@Param("id") Long id);
 }

@@ -21,7 +21,7 @@ public class SmsStatus {
     private String phone;
     @Column(name = "flag")
     private Long flag;
-    @Column(name = "status")
+    @Column(name = "status",length = 10000)
     private String status;
     @Column(name = "created_at")
     @CreationTimestamp
